@@ -12,6 +12,7 @@ Yorumları takip edin.
 */
 
 import React from 'react';
+import { useState } from 'react';
 /* ADIM 0  */
 
 
@@ -30,7 +31,8 @@ export const enIyilerListesi = [
 export default function Programcilar() {
   // İki state dilimine ihtiyacımız olduğundan, state hooku iki kez kullanmamız gerekecek..
   // Bir yanda programcılar listesi, diğer yanda öne çıkan programcının idsi.
-
+  const [programcilar, setProgramcilar] = useState(enIyilerListesi);
+  const [programciId, setProgramciId] = useState(null);
 	
   const oneCikaninIsmi = () => {
     // Bunu sona bırakın!
